@@ -1,0 +1,28 @@
+
+:root {
+    --form-control-color: rebeccapurple;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.logo_image{
+    height: 100px;
+    width: auto;
+    position: relative;
+}
+
+.taking-visible{
+    display: block;
+}
+
+.taking-hidden{
+    display: none;
+}
