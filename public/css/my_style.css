@@ -1,6 +1,13 @@
 
 :root {
     --form-control-color: rebeccapurple;
+
+}
+
+.my_colors{
+    --red: #ee3e38;
+    --main: #2e3e73;
+    --orange: #fcb232;
 }
 
 *,
@@ -10,7 +17,23 @@
 }
 
 body {
+    background: var(--main);
     margin: 0;
+}
+
+.main_orange{
+    background: var(--orange);
+    color: var(--main);
+}
+
+.main_red{
+    background: var(--red);
+    color: var(--main);
+}
+
+.main_blue{
+    background: var(--main);
+    color: var(--orange);
 }
 
 .logo_image{

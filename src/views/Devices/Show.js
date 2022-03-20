@@ -34,13 +34,13 @@ export default function(){
 
 
     let device_components = devices.length == 0 ? (
-        <div className="card shadow-sm">
+        <div className="card shadow-sm main_orange">
             <div className="card-body">
                 <h5 className="card-title">Loading Devices ....</h5>
             </div>
         </div>
     ) : devices.map(device => {
-        return (<div key={device.id} className="card shadow-sm mb-3">
+        return (<div key={device.id} className="card shadow-sm mb-3 main_orange">
             <div className="card-body">
                 <h5 className="card-title">{device.name}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">{device.type}</h6>

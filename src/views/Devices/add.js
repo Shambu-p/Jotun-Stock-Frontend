@@ -93,7 +93,7 @@ export default function(){
     };
 
     let category_option = categories.map(category => {
-        return (<option value={category.name}>{category.name}</option>);
+        return (<option value={category.name} className="main_orange">{category.name}</option>);
     });
 
     return (
@@ -102,29 +102,29 @@ export default function(){
             <NavigationBar/>
             <button className="btn btn-lg btn-primary btn-block mb-3" onClick={() => {navigate("/")}}>Back To Device</button>
             <div className="d-flex justify-content-center">
-                <form onSubmit={addDevice} style={{width: "50%"}} className="card">
+                <form onSubmit={addDevice} style={{width: "50%"}} className="card main_orange">
                     <div className="card-body">
 
                         <div className="input-group mb-3">
-                            <input type="text" onChange={nameOnChange} className="form-control" placeholder="Name"/>
+                            <input type="text" onChange={nameOnChange} className="form-control main_orange" placeholder="Name"/>
                             <div className="input-group-append">
-                                <span className="input-group-text">Name</span>
+                                <span className="input-group-text main_red">Name</span>
                             </div>
                         </div>
 
                         <div className="input-group mb-3">
-                            <select title="Category" onChange={typeOnChange} className="form-control">
+                            <select title="Category" onChange={typeOnChange} className="form-control main_orange">
                                 {category_option}
                             </select>
                             <div className="input-group-append">
-                                <span className="input-group-text">Type</span>
+                                <span className="input-group-text main_red">Type</span>
                             </div>
                         </div>
 
                         <div className="input-group mb-3">
-                            <input type="number" className="form-control" onChange={amountOnChange} placeholder="Amount"/>
+                            <input type="number" className="form-control main_orange" onChange={amountOnChange} placeholder="Amount"/>
                             <div className="input-group-append">
-                                <span className="input-group-text">Amount</span>
+                                <span className="input-group-text main_red">Amount</span>
                             </div>
                         </div>
 

@@ -29,9 +29,15 @@
 <!--    <link rel="stylesheet" href="%PUBLIC_URL%/css/circular_progress.css">-->
     <title>Todo App</title>
   </head>
-  <body>
+  <body style="background: #2e3e73">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <script>
+      window.onload = function (){
+        document.documentElement.className = "my_colors";
+      }
+    </script>
 
 <!--    <div className="circular_progress p-0">-->
 <!--      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">-->

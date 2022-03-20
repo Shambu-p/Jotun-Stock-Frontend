@@ -8,7 +8,10 @@ import Departments from "./views/Devices/departments";
 import Devices from "./views/Devices/Show";
 import EditDevice from "./views/Devices/edit";
 import AddDevice from "./views/Devices/add";
+import AddUser from "./views/Users/add";
+import ShowUsers from "./views/Users/show";
 import Error from "./views/Error";
+
 
 
 ReactDOM.render(
@@ -20,6 +23,8 @@ ReactDOM.render(
             <Route path="/departments" element={<Departments />} />
             <Route path="/device/edit/:device_id" element={<EditDevice />} />
             <Route path="/device/add" element={<AddDevice />} />
+            <Route path="/user/add" element={<AddUser />} />
+            <Route path="/users" element={<ShowUsers />} />
 
             <Route path="*" element={<Error />} />
 

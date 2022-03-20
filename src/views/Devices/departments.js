@@ -65,7 +65,7 @@ export default function (){
 
 
     let comp = departments.map(department => {
-        return <li className="list-group-item">{department.name}</li>
+        return <li className="list-group-item main_orange">{department.name}</li>
     });
 
     return (
@@ -73,20 +73,20 @@ export default function (){
             <NavigationBar/>
             <div className="p-2" >
 
-                <div className="card mb-3 shadow-sm">
+                <div className="card mb-3 shadow-sm main_orange">
                     <div className="card-body">
                         <ul className="list-group list-group-flush">
-                            <li className="list-group-item active">Departments</li>
+                            <li className="list-group-item main_red">Departments</li>
                             {comp}
                         </ul>
                     </div>
                 </div>
 
-                <div className="card shadow-sm">
+                <div className="card shadow-sm main_orange">
                     <div className="card-body">
 
                         <form onSubmit={submitForm} className="input-group">
-                            <input type="text" onChange={nameOnChange} className="form-control" placeholder="Department Name" />
+                            <input type="text" onChange={nameOnChange} className="form-control main_orange" placeholder="Department Name" />
                             <div className="input-group-append">
                                 <button className="btn btn-outline-success" type="submit">
                                     Add
