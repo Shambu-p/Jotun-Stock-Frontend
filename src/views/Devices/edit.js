@@ -116,7 +116,7 @@ export default function(){
     };
 
     let category_option = categories.map(category => {
-        return (<option value={category.name} >{category.name}</option>);
+        return (<option value={category.name} className="main_orange">{category.name}</option>);
     });
 
     let main_component = !device.name ? (
@@ -126,33 +126,33 @@ export default function(){
             </div>
         </div>
     ) : (
-        <form onSubmit={editDevice} style={{width: "50%"}} className="card">
+        <form onSubmit={editDevice} style={{width: "50%"}} className="card main_orange">
             <div className="card-body">
 
                 <div className="input-group mb-3">
-                    <input type="text" onChange={nameOnChange} className="form-control" placeholder={device.name}/>
+                    <input type="text" onChange={nameOnChange} className="form-control main_orange" placeholder={device.name}/>
                     <div className="input-group-append">
-                        <span className="input-group-text">Name</span>
+                        <span className="input-group-text main_red">Name</span>
                     </div>
                 </div>
 
                 <div className="input-group mb-3">
-                    <select title="Category" onChange={typeOnChange} className="form-control">
+                    <select title="Category" onChange={typeOnChange} className="form-control main_orange">
                         {category_option}
                     </select>
                     <div className="input-group-append">
-                        <span className="input-group-text">Type</span>
+                        <span className="input-group-text main_red">Type</span>
                     </div>
                 </div>
 
                 <div className="input-group mb-3">
-                    <input type="number" className="form-control" placeholder={device.amount} onChange={amountOnChange} />
+                    <input type="number" className="form-control main_orange" placeholder={device.amount} onChange={amountOnChange} />
                     <div className="input-group-append">
-                        <span className="input-group-text">Amount</span>
+                        <span className="input-group-text main_red">Amount</span>
                     </div>
                 </div>
 
-                <button className="btn btn-warning btn-block">Edit</button>
+                <button className="btn btn-primary btn-block main_blue">Edit</button>
 
             </div>
         </form>
@@ -162,7 +162,11 @@ export default function(){
         <div className="container mt-5">
 
             <NavigationBar/>
-            <button className="btn btn-lg btn-primary btn-block mb-3" onClick={() => {navigate("/")}}>Back To Device</button>
+            <div className="d-flex justify-content-end mb-3">
+                <button className="btn btn-sm btn-primary mr-2" onClick={() => {navigate("/device/view/" + params.device_id);}}>View</button>
+                <button className="btn btn-sm btn-success mr-2" onClick={() => {navigate("/device/receive/" + params.device_id);}}>New Receive</button>
+                <button className="btn btn-sm btn-danger mr-2" >Delete</button>
+            </div>
             <div className="d-flex justify-content-center">
                 {main_component}
             </div>

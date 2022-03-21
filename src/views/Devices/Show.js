@@ -49,9 +49,8 @@ export default function(){
                 </p>
 
                 <button className="btn btn-sm btn-primary mr-2">Request</button>
-                <button className="btn btn-sm btn-success mr-2" >View</button>
+                <button className="btn btn-sm btn-success mr-2" onClick={() => {navigate("/device/view/" + device.id);}}>View</button>
                 <button className="btn btn-sm btn-warning mr-2" onClick={() => {navigate("/device/edit/" + device.id);}}>Edit</button>
-                <button className="btn btn-sm btn-danger mr-2" >Delete</button>
             </div>
         </div>);
     });
@@ -59,9 +58,11 @@ export default function(){
     return (
         <div className="container mt-5">
             <NavigationBar />
+            <div className="d-flex justify-content-end mb-3">
+                <button className="btn btn-sm btn-success ml-2" onClick={() => {navigate("/device/add")}}>Add Device</button>
+            </div>
             <div className="d-flex justify-content-center">
                 <div className="col-10">
-                    <button className="btn btn-lg btn-success btn-block mb-3" onClick={() => {navigate("/device/add")}}>Add Device</button>
                     {device_components}
                 </div>
             </div>

@@ -28,6 +28,9 @@ export default function (){
                     <li className="nav-item">
                         <button className="btn btn-link" onClick={() => {navigate("/users");}}>Users</button>
                     </li>
+                    <li className="nav-item">
+                        <button className="btn btn-link" onClick={() => {navigate("/receives");}}>Receives</button>
+                    </li>
                 </ul>
             </div>
         </div>

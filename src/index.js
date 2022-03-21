@@ -7,9 +7,13 @@ import AddCategory from "./views/Categories/add";
 import Departments from "./views/Devices/departments";
 import Devices from "./views/Devices/Show";
 import EditDevice from "./views/Devices/edit";
+import ViewDevice from "./views/Devices/view";
+import ReceiveDevice from "./views/Devices/receive";
+import Receives from "./views/Devices/receives";
 import AddDevice from "./views/Devices/add";
 import AddUser from "./views/Users/add";
 import ShowUsers from "./views/Users/show";
+import EditUser from "./views/Users/edit";
 import Error from "./views/Error";
 
 
@@ -22,9 +26,13 @@ ReactDOM.render(
             <Route path="/categories" element={<AddCategory />} />
             <Route path="/departments" element={<Departments />} />
             <Route path="/device/edit/:device_id" element={<EditDevice />} />
+            <Route path="/device/view/:device_id" element={<ViewDevice />} />
+            <Route path="/device/receive/:device_id" element={<ReceiveDevice />} />
+            <Route path="/receives" element={<Receives />} />
             <Route path="/device/add" element={<AddDevice />} />
             <Route path="/user/add" element={<AddUser />} />
             <Route path="/users" element={<ShowUsers />} />
+            <Route path="/user/edit/:user_id" element={<EditUser />} />
 
             <Route path="*" element={<Error />} />
 
